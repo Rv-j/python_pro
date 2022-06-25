@@ -1,29 +1,32 @@
-import product
-import customer
-import order
-if __name__ == '__main__':
-    x = product.Product('Realme 6 Pro 8/128GB Red', 'Width 75.8 mm, Height 163.8 mm, Depth 8.9 mm', 5000)
-    y = product.Product('Samsung Galaxy M31 6/128GB Black', 'Width 75.1 mm, Height 159.2 mm, Depth 8.9 mm', 5500)
-    z = product.Product('Motorola G9 Play 4/64GB Blue', 'Width 75.73 mm, Height 165.21 mm, Depth 9.18 mm', 4500)
 
-    a = customer.Customer('Shevchenko', 'Valerii', 'Ivanovich', '+380634833222')
-    b = customer.Customer('Silko', 'Andrii', 'Vasilievich', '+380687841276')
-    c = customer.Customer('Zubov', 'Sergii', 'Aleksandrovich', '+380976548723')
+from student import Student
+from group import Group
 
-    order_1 = order.Order(a)
-    order_2 = order.Order(b)
-    order_3 = order.Order(c)
+stud_1 = Student('Ванюшин', 'Ваня', '063111111', '21', '175', '55', 'Мужской', 'Украинец')
+stud_2 = Student('Ретрцши', 'Петя', '063222222', '22', '174', '58', 'Мужской', 'Украинец')
+stud_3 = Student('Герась', 'Хайлим', '063333333', '21', '168', '66', 'Мужской', 'Татарин')
+stud_4 = Student('Романен', 'Гарик', '063444444', '19', '168', '63', 'Мужской', 'Узбек')
+stud_5 = Student('Мукровец', 'Витя', '063555555', '21', '190', '90', 'Мужской', 'Украинец')
+stud_6 = Student('Квандзи', 'Луйчи', '0636666666', '24', '160', '50', 'Мужской', 'Китаец')
+stud_7 = Student('Сидоров', 'Ваня', '0637777777', '21', '175', '120', 'Мужской', 'Украинец')
+stud_8 = Student('Джерсон', 'Стив', '063000000', '28', '190', '90', 'Мужской', 'Американец')
+stud_9 = Student('Лерчин', 'Света', '0688888888', '24', '155', '49', 'Женский', 'Украинка')
+stud_10 = Student('Вальчи', 'Виктор', '0639999999', '23', '175', '65', 'Мужской', 'Украинец')
+stud_11 = Student('Джерсон', 'Стив', '063000000', '28', '190', '90', 'Мужской', 'Американец')
+stud_12 = Student('Киткси', 'Саманта', '063005660', '18', '170', '50', 'Женский', 'Американка')
 
-    order_1.products.append(x)
-    order_1.products.append(y)
-    order_2.products.append(y)
-    order_2.products.append(z)
-    order_3.products.append(z)
-    order_3.products.append(x)
-    order_1.products.append(x)
+group_mku_87 = Group('new')
+group_mku_87.add_student(stud_1)
+group_mku_87.add_student(stud_2)
+group_mku_87.add_student(stud_3)
+group_mku_87.add_student(stud_4)
+group_mku_87.add_student(stud_5)
+group_mku_87.add_student(stud_6)
+group_mku_87.add_student(stud_7)
+group_mku_87.add_student(stud_8)
+group_mku_87.add_student(stud_9)
+group_mku_87.add_student(stud_10)
+group_mku_87.add_student(stud_11)
+group_mku_87.add_student(stud_12)
 
-    print(order_1)
-    print(order_2)
-    print(order_3)
-
-    print(order.Order.get_orders_count())
+print(group_mku_87)
